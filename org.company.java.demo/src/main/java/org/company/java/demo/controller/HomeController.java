@@ -9,20 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/home")
 public class HomeController {
 
 	@CrossOrigin
-	@RequestMapping("/characters")
-	public List<DragonBallCharacter> home(){
-		
-		List<DragonBallCharacter> characters = new ArrayList<DragonBallCharacter>();
-		
-		characters.add(new org.company.java.demo.model.DragonBallCharacter(1, "Son Goku", ""));
-		characters.add(new org.company.java.demo.model.DragonBallCharacter(2, "Son Gohan", ""));
-		characters.add(new org.company.java.demo.model.DragonBallCharacter(3, "Kuririn", ""));
-		
-		return characters;
+	@RequestMapping("/greetings")
+	public string Index(){
+
+		return "Hello World!";
 	}
 	
 }
