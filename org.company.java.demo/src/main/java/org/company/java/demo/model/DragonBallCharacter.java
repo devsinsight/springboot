@@ -1,14 +1,37 @@
 package org.company.java.demo.model;
 
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Character", schema="dbo")
 public class DragonBallCharacter {
-	public int id;
-	public String name;
-	public String info;
 	
-	public DragonBallCharacter(int id, String name, String info){
-		this.id = id;
-		this.name = name;
-		this.info = info;
-		
-	}
+	@Id
+	public int id;
+	
+	@Column(name = "AnimeName")
+	public String animeName;
+	
+	@Column(name = "AlternateNames")
+	public String alternateNames;
+	
+	@Column(name = "Race")
+	public String race;
+	
+	@Column(name = "Gender")
+	public char gender;
+	
+	@Column(name = "DateOfBirth")
+	public String dateOfBirth;
+	
+	@Column(name = "DateOfDeath")
+	public String dateOfDeath;
+	
+	public DragonBallCharacter(){}
+	
 }
